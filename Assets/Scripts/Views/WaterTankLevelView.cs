@@ -10,6 +10,7 @@ namespace Views
         private void Start()
         {
             _waterTank.OnWaterLevelChangedNormalized += OnWaterLevelChangedNormalized;
+            OnWaterLevelChangedNormalized(_waterTank.WaterLevelNormalized);
         }
 
         private void OnWaterLevelChangedNormalized(float waterLevelNormalized)

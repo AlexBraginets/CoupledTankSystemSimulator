@@ -287,6 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c4e349f78f4af40aec17714eef042f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <WaterLevel>k__BackingField: 0.9
+  _radius: 2
 --- !u!1 &8756797037576181108
 GameObject:
   m_ObjectHideFlags: 0

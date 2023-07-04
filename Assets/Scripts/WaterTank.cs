@@ -4,15 +4,28 @@ using UnityEngine;
 public class WaterTank : MonoBehaviour
 {
     public const float MAX_WATER_LEVEL = 1f;
-    public float WaterLevel { get; private set; }
+    [field: SerializeField] public float WaterLevel { get; private set; }
+    [SerializeField] private float _radius;
+    public float SectionArea => Mathf.PI * _radius * _radius;
+    public float Volume => SectionArea * WaterLevel;
     public float WaterLevelNormalized => WaterLevel / MAX_WATER_LEVEL;
     public event Action<float> OnWaterLevelChangedNormalized;
 
-    public void SetWaterLevelNormalized(float waterLevelNormalized)
+    private void SetWaterLevelNormalized(float waterLevelNormalized)
     {
         var waterLevel = waterLevelNormalized * MAX_WATER_LEVEL;
-        WaterLevel = waterLevel;
-        OnWaterLevelChangedNormalized?.Invoke(waterLevelNormalized);
+        SetWaterLevel(waterLevel);
     }
 
+    public void SetWaterLevel(float waterLevel)
+    {
+        WaterLevel = waterLevel;
+        OnWaterLevelChangedNormalized?.Invoke(WaterLevelNormalized);
+    }
+
+    public void AddVolume(float volume)
+    {
+        var dh = volume / SectionArea;
+        SetWaterLevel(WaterLevel + dh);
+    }
 }
