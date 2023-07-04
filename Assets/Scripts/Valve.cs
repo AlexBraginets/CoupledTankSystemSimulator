@@ -1,18 +1,41 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Valve : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   private bool _isOpen;
+   public event Action OnOpen;
+   public event Action OnClose;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   public void Open()
+   {
+      if (_isOpen) return;
+      _isOpen = true;
+      OnOpen?.Invoke();
+   }
+
+   public void Close()
+   {
+      if (!_isOpen) return;
+      _isOpen = false;
+      OnClose?.Invoke();
+   }
+
+   private void OnMouseDown()
+   {
+      Toggle();
+   }
+
+   private void Toggle()
+   {
+      if (_isOpen)
+      {
+         Close();
+      }
+      else
+      {
+         Open();
+      }
+   }
+
 }
