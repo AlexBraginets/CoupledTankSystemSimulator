@@ -905,7 +905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 82746443436935967, guid: 11068979550711f4abeee9da66cc3048, type: 3}
       propertyPath: <WaterLevel>k__BackingField
-      value: 0.2
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1688686588244029754, guid: 11068979550711f4abeee9da66cc3048, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1307,7 +1307,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 790406434779987741, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
       propertyPath: <WaterFlowRate>k__BackingField
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 805307265264481740, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
       propertyPath: _valve

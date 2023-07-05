@@ -7,6 +7,7 @@ public class WaterTankSystem : MonoBehaviour
     [SerializeField] private ConnectionPipe _connectionPipe;
     [SerializeField] private Valve _valve;
     private bool _isTanksConnected;
+
     private void Start()
     {
         _valve.OnOpen += OnValveOpen;
@@ -26,13 +27,18 @@ public class WaterTankSystem : MonoBehaviour
     private void Update()
     {
         if (!_isTanksConnected) return;
+        float pipeLevel = _connectionPipe.Level;
+        float maxTankLevel = Mathf.Max(_leftWaterTank.WaterLevel, _rightWaterTank.WaterLevel);
+        if (pipeLevel >= maxTankLevel) return;
         float transferVolume = GetWaterFlowRate() * Time.deltaTime;
         if (_leftWaterTank.WaterLevel > _rightWaterTank.WaterLevel)
         {
+            transferVolume = Mathf.Min(GetVolumeTillPipe(_leftWaterTank), transferVolume);
             TransferWaterClamped(_leftWaterTank, _rightWaterTank, transferVolume);
         }
-        else if(_rightWaterTank.WaterLevel > _leftWaterTank.WaterLevel)
+        else if (_rightWaterTank.WaterLevel > _leftWaterTank.WaterLevel)
         {
+            transferVolume = Mathf.Min(GetVolumeTillPipe(_rightWaterTank), transferVolume);
             TransferWaterClamped(_rightWaterTank, _leftWaterTank, transferVolume);
         }
     }
@@ -46,6 +52,15 @@ public class WaterTankSystem : MonoBehaviour
         // transfer water
         fromTank.AddVolume(-clampedTransferVolume);
         toTank.AddVolume(clampedTransferVolume);
+    }
+
+    private float GetVolumeTillPipe(WaterTank tank)
+    {
+        float tankLevel = tank.WaterLevel;
+        float pipeLevel = _connectionPipe.Level;
+        float dLevel = tankLevel - pipeLevel;
+        float area = tank.SectionArea;
+        return dLevel * area;
     }
 
     private float GetWaterFlowRate()

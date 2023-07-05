@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WaterTank : MonoBehaviour
 {
-    public const float MAX_WATER_LEVEL = 1f;
+    public const float MAX_WATER_LEVEL = 6f;
     [field: SerializeField] public float WaterLevel { get; private set; }
     [SerializeField] private float _radius;
     public float SectionArea => Mathf.PI * _radius * _radius;
