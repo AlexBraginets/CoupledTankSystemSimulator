@@ -33,7 +33,7 @@ public class WaterTankSystem : MonoBehaviour
         }
         else if(_rightWaterTank.WaterLevel > _leftWaterTank.WaterLevel)
         {
-            TransferWaterClamped(_rightWaterTank, _rightWaterTank, transferVolume);
+            TransferWaterClamped(_rightWaterTank, _leftWaterTank, transferVolume);
         }
     }
 

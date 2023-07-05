@@ -17,6 +17,11 @@ public class WaterTank : MonoBehaviour
         SetWaterLevel(waterLevel);
     }
 
+    public void SetWaterLevelClamp(float waterLevel)
+    {
+        waterLevel = Mathf.Clamp(waterLevel, 0, MAX_WATER_LEVEL);
+        SetWaterLevel(waterLevel);
+    }
     public void SetWaterLevel(float waterLevel)
     {
         WaterLevel = waterLevel;

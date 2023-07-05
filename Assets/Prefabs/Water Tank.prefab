@@ -252,6 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1713500502274949494}
   - component: {fileID: 82746443436935967}
+  - component: {fileID: 8312458657371967285}
   m_Layer: 0
   m_Name: Water Tank
   m_TagString: Untagged
@@ -289,6 +290,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <WaterLevel>k__BackingField: 0.9
   _radius: 2
+--- !u!114 &8312458657371967285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7379115855971298573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ee9b31c1c1ec04e8a8cebbb2431149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waterTank: {fileID: 82746443436935967}
+  _waterSupplyLevelRate: 1
 --- !u!1 &8756797037576181108
 GameObject:
   m_ObjectHideFlags: 0
