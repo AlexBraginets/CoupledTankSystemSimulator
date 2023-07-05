@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WaterTankSupplier : MonoBehaviour
@@ -16,23 +13,13 @@ public class WaterTankSupplier : MonoBehaviour
         _isOperating = true;
     }
 
-    public void StopSupplying()
-    {
-        StopOperating();
-    }
-
     public void StartDraining()
     {
         _currentSupplyLevelRate = -_waterSupplyLevelRate;
         _isOperating = true;
     }
 
-    public void StopDraining()
-    {
-        StopOperating();
-    }
-
-    private void StopOperating()
+    public void StopOperating()
     {
         _isOperating = false;
     }

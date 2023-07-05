@@ -18,17 +18,7 @@ namespace Views
             UpdateLabel(_waterTank.WaterLevelNormalized);
         }
 
-        public void Show()
-        {
-            _view.SetActive(true);
-        }
-
-        public void Hide()
-        {
-            _view.SetActive(false);
-        }
-
-        public void Toggle()
+        private void Toggle()
         {
             _view.SetActive(!_view.activeSelf);
         }

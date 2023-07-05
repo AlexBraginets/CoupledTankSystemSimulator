@@ -11,10 +11,10 @@ namespace Views
         private void Start()
         {
             _levelUpButton.OnButtonDown += _supplier.StartSupplying;
-            _levelUpButton.OnButtonUp += _supplier.StopSupplying;
+            _levelUpButton.OnButtonUp += _supplier.StopOperating;
             
             _levelDownButton.OnButtonDown += _supplier.StartDraining;
-            _levelDownButton.OnButtonUp += _supplier.StopDraining;
+            _levelDownButton.OnButtonUp += _supplier.StopOperating;
         }
     }
 }

@@ -10,19 +10,13 @@ public class WaterTank : MonoBehaviour
     public float Volume => SectionArea * WaterLevel;
     public float WaterLevelNormalized => WaterLevel / MAX_WATER_LEVEL;
     public event Action<float> OnWaterLevelChangedNormalized;
-
-    private void SetWaterLevelNormalized(float waterLevelNormalized)
-    {
-        var waterLevel = waterLevelNormalized * MAX_WATER_LEVEL;
-        SetWaterLevel(waterLevel);
-    }
-
     public void SetWaterLevelClamp(float waterLevel)
     {
         waterLevel = Mathf.Clamp(waterLevel, 0, MAX_WATER_LEVEL);
         SetWaterLevel(waterLevel);
     }
-    public void SetWaterLevel(float waterLevel)
+
+    private void SetWaterLevel(float waterLevel)
     {
         WaterLevel = waterLevel;
         OnWaterLevelChangedNormalized?.Invoke(WaterLevelNormalized);
