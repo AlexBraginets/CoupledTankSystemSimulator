@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waterTank: {fileID: 82746443436935967}
-  _waterSupplyLevelRate: 1
+  _waterSupplyLevelRate: 0.25
 --- !u!1 &8756797037576181108
 GameObject:
   m_ObjectHideFlags: 0
