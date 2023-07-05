@@ -20,22 +20,4 @@ public class Valve : MonoBehaviour
       _isOpen = false;
       OnClose?.Invoke();
    }
-
-   private void OnMouseDown()
-   {
-      Toggle();
-   }
-
-   private void Toggle()
-   {
-      if (_isOpen)
-      {
-         Close();
-      }
-      else
-      {
-         Open();
-      }
-   }
-
 }
