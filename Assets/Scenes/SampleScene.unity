@@ -1663,6 +1663,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -3.4
       objectReference: {fileID: 0}
+    - target: {fileID: 82746443436935967, guid: 11068979550711f4abeee9da66cc3048, type: 3}
+      propertyPath: <WaterLevel>k__BackingField
+      value: 5.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1713500502274949494, guid: 11068979550711f4abeee9da66cc3048, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1895,6 +1899,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6756513950849120383, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756513951031764482, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756513952378482963, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
