@@ -1021,7 +1021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524820d9f0641a849a87c7e4dc8ea0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pipe: {fileID: 209840485}
+  _connectionPipe: {fileID: 1191835147}
   _yLocalLimits: {x: 0, y: 5.5}
   _liftRate: 2
 --- !u!114 &1498187694 stripped
