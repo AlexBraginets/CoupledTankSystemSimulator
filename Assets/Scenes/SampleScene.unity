@@ -306,6 +306,7 @@ MonoBehaviour:
   _rightWaterTank: {fileID: 1498187694}
   _connectionPipe: {fileID: 1191835147}
   _valve: {fileID: 381174029}
+  _waterFlowRateProvider: {fileID: 6756513952040799862}
 --- !u!4 &277249672
 Transform:
   m_ObjectHideFlags: 0
@@ -410,8 +411,8 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!114 &381174029 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 308845267242469102, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-  m_PrefabInstance: {fileID: 308845266934695907}
+  m_CorrespondingSourceObject: {fileID: 6756513952217468792, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
+  m_PrefabInstance: {fileID: 6756513952040799861}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -1651,67 +1652,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &308845266934695907
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 209840485}
-    m_Modifications:
-    - target: {fileID: 308845267242469097, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_Name
-      value: Valve
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267242469103, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 308845267402471557, guid: cca71384c316c8440986ff77fb28158c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cca71384c316c8440986ff77fb28158c, type: 3}
 --- !u!1001 &5220362128989864441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1897,14 +1837,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1207269478}
     m_Modifications:
-    - target: {fileID: 790406434779987741, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
-      propertyPath: <WaterFlowRate>k__BackingField
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 805307265264481740, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
-      propertyPath: _valve
+    - target: {fileID: 3264544946821043082, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
+      propertyPath: _leftTank
       value: 
-      objectReference: {fileID: 381174029}
+      objectReference: {fileID: 99381960}
+    - target: {fileID: 3264544946821043082, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
+      propertyPath: _rightTank
+      value: 
+      objectReference: {fileID: 1498187694}
+    - target: {fileID: 3264544946821043082, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
+      propertyPath: _connectionPipe
+      value: 
+      objectReference: {fileID: 1191835147}
     - target: {fileID: 6756513950849120380, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
       propertyPath: m_Name
       value: Connection pipe
@@ -1955,3 +1899,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
+--- !u!114 &6756513952040799862 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3264544946821043082, guid: 4cb8312b437046b4cbc899ed79bf159e, type: 3}
+  m_PrefabInstance: {fileID: 6756513952040799861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3f186aca9390e40b61f3411598e71f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

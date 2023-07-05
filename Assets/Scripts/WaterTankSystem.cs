@@ -6,6 +6,7 @@ public class WaterTankSystem : MonoBehaviour
     [SerializeField] private WaterTank _rightWaterTank;
     [SerializeField] private ConnectionPipe _connectionPipe;
     [SerializeField] private Valve _valve;
+    [SerializeField] private WaterFlowRateProvider _waterFlowRateProvider;
     private bool _isTanksConnected;
 
     private void Start()
@@ -65,6 +66,6 @@ public class WaterTankSystem : MonoBehaviour
 
     private float GetWaterFlowRate()
     {
-        return _connectionPipe.WaterFlowRate;
+        return _waterFlowRateProvider.GetWaterFlowRate();
     }
 }
